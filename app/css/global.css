@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/* 
+  @名称: global
+  @功能: 公用样式, 复用性较强的样式
+*/
+
+/* 清理浮动 */
+.clearfix:after {
+	visibility:hidden;
+	display:block;
+	font-size:0;
+	content:" ";
+	clear:both;
+	height:0;
+}
+.clearfix {
+	zoom:1; /* for IE6 IE7 */
+}
+.inline-block {
+    display: inline-block;
+}
+/* 隐藏、显示, 通常用来与 JS 配合 */
+.hide {
+	display:none;
+}
+.show {
+	display:block;
+}
+.positionRelative{
+    position: relative;
+}
+/* 浮动左右, 设置内联, 减少浮动带来的bug */
+.fl,.fr {
+	display:inline;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+/* loadding */
+.canvasloader-container {
+    position: absolute;
+    z-index: 99999999;
+    top: 50%;
+    margin-top: -39px;
+    left: 50%;
+    margin-left: -64px;
+    padding-top: 7px;
+    padding-left: 28px;
+    width: 127px;
+    height: 30px;
+    border: #e3e4e4 1px solid;
+    background: #f8fcff;
+    border: rgba(103,175,225,0.2) 4px solid;
+    border-radius: 4px;
+}
+.loadingText {
+    position: absolute;
+    left: 58px;
+    top: 8px;
+    font-size: 14px;
+    color: #6fa4c8;
+}
+/*焦点input*/
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px #5faee3 solid;
+}
+/*不光是应用中用到了*/
+.contBox .fill-info .text:focus{
+    outline: none;
+    border: 1px #5faee3 solid;
+}
+/* 盒子模型 */
+.mg-t5{margin-top:5px;}
+.mg-t10{margin-top:10px;}
+.mg-t15{margin-top:15px;}
+.mg-t20{margin-top:20px;}
+.mg-t25{margin-top:25px;}
+.mg-t30{margin-top:30px;}
+.mg-t35{margin-top:35px;}
+.mg-t40{margin-top:40px;}
+.mg-b5{margin-bottom:5px;}
+.mg-b10{margin-bottom:10px;}
+.mg-b15{margin-bottom:15px;}
+.mg-b20{margin-bottom:20px;}
+.mg-b25{margin-bottom:25px;}
+.mg-b30{margin-bottom:30px;}
+.mg-b35{margin-bottom:35px;}
+.mg-b40{margin-bottom:40px;}
+.mg-l5{margin-left:5px;}
+.mg-l10{margin-left:10px;}
+.mg-l15{margin-left:15px;}
+.mg-l20{margin-left:20px;}
+.mg-l25{margin-left:25px;}
+.mg-l30{margin-left:30px;}
+.mg-l35{margin-left:35px;}
+.mg-l40{margin-left:40px;}
+.mg-l50{margin-left:50px;}
+.mg-r5{margin-right:5px;}
+.mg-r10{margin-right:10px;}
+.mg-r15{margin-right:15px;}
+.mg-r20{margin-right:20px;}
+.mg-r25{margin-right:25px;}
+.mg-r30{margin-right:30px;}
+.mg-r35{margin-right:35px;}
+.mg-r40{margin-right:40px;}
+.pd-t5{padding-top:5px;}
+.pd-t10{padding-top:10px;}
+.pd-t15{padding-top:15px;}
+.pd-t20{padding-top:20px;}
+.pd-t25{padding-top:25px;}
+.pd-t30{padding-top:30px;}
+.pd-t35{padding-top:35px;}
+.pd-t40{padding-top:40px;}
+.pd-b5{padding-bottom:5px;}
+.pd-b10{padding-bottom:10px;}
+.pd-b15{padding-bottom:15px;}
+.pd-b20{padding-bottom:20px;}
+.pd-b25{padding-bottom:25px;}
+.pd-l5{padding-left:5px;}
+.pd-l10{padding-left:10px;}
+.pd-l15{padding-left:15px;}
+.pd-l20{padding-left:20px;}
+.pd-l25{padding-left:25px;}
+.pd-l30{padding-left:30px;}
+.pd-r5{padding-right:5px;}
+.pd-r10{padding-right:10px;}
+.pd-r15{padding-right:15px;}
+.pd-r20{padding-right:20px;}
+.pd-r25{padding-right:25px;}
+
+/* 字体设置 */
+.msyh {/* 微软雅黑，IE6用黑体代替 */
+	font-family: "Microsoft YaHei", SimHei, sans-serif;  
+	_font-family: SimHei, sans-serif;
+}
+.bold{font-weight:bold;}
+
+/* 字体大小 */
+.px12{font-size: 12px;}
+.px14{font-size: 14px;}
+.px16{font-size: 16px;}
+.px18{font-size: 18px;}
+.px22{font-size: 22px;}
+.px24{font-size: 24px;}
+.px26{font-size: 26px;}
+.px28{font-size: 28px;}
+
+/*居中居左居右*/
+.txt-c{
+    text-align: center;
+}
+.txt-l{
+    text-align: left;
+}
+.txt-r{
+    text-align: right;
+}
+
+
+/* 公共布局 */
+.container {
+    position: relative;
+    width: 1200px;
+    margin: 30px auto;
+    padding-bottom: 30px;
+    font-family: "Microsoft YaHei", SimHei, sans-serif;
+}
+
+/* 媒体查询 */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 640px;
+        
+    }
+}
+
+/* 字体颜色、链接色 */
+.white {
+	color:#fff;}
+	a.white:link{color:#fff; text-decoration:none;} 
+	a.white:visited{color:#fff; text-decoration:none;}
+	a.white:hover{color:#fff; text-decoration:none;}
+.black-999 {
+	color:#999;}
+	a.black-999:link{color:#999; text-decoration:none;} 
+	a.black-999:visited{color:#999; text-decoration:none;}
+	a.black-999:hover{color:#999; text-decoration:none;}
+.blue-239 {/* 例：链接蓝 */
+	color: #2392dc;}
+	a.blue-ccf:link{color:#2392dc; text-decoration:none;} 
+	a.blue-ccf:visited{color:#2392dc; text-decoration:none;}
+	a.blue-ccf:hover{color:#2392dc; text-decoration:underline;}
+.red-ff6 {/* 例：链接红 */
+    color: #ff6f6f;}
+    a.red-ff6:link{color:#ff6f6f; text-decoration:none;} 
+    a.red-ff6:visited{color:#ff6f6f; text-decoration:none;}
+    a.red-ff6:hover{color:#ff6f6f; text-decoration:underline;}
+
+/* 透明样式 */
+.opacity {
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+}
+
+/* 验证样式 */
+.msg_holder {
+    display: none;
+    color: #666;
+    height: 28px;
+    line-height: 28px;
+    border: #f4b5ad 1px solid;
+    padding-left: 35px;
+    background: #ffe7e4 url(/js/lib/validator/images/validator_custom.png) 10px no-repeat;
+}
+form input.errorClass {
+	border: #f99999 1px solid;
+}
+/*密码强度*/
+.step1,.step2,.step3 {
+    display: none;
+    width:94px;
+    height:24px;
+    background:url(/images/register/rank.png) no-repeat;
+    margin-top:-5px;
+}
+.step2 {
+    background-position:0 -24px;
+}
+.step3 {
+    background-position:0 -48px;
+}
+.progressbar {
+    width: 297px;
+    margin-left: 81px;
+    padding-top: 5px;
+    clear: both;
+}
+.progress {
+    height: 12px;
+}
+
+/*兼容ie8的placeholder*/
+span.emptyhint {
+    color:#999;
+    position:absolute;
+    top: 6px;
+    left:80px;
+    padding:3px;
+    font-size: 14px;
+}
+
+/*鼠标手指*/
+.pointer {
+    cursor : pointer;
+}
+/*返回顶部*/
+.backViewShow{
+    position: fixed;
+    right: 10px;
+    bottom: 150px;
+    width: 50px;
+}
+#backTop,#view,#guidance{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(/images/application/backTop.png) no-repeat 0px -127px;
+}
+#view{
+    height: 68px;
+}
+#view:hover{
+    background-position: 0px -494px;
+}
+#view{
+    background-position: 0px -410px
+}
+#backTop:hover{
+    background-position: 0px -340px
+}
+#guidance{
+    height: 84px;
+    background-position: 0px -576px;
+}
+#guidance:hover{
+    height: 84px;
+    background-position: 0px -660px;
+}

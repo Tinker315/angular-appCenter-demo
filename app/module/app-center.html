@@ -1,0 +1,71 @@
+<!-- 应用中心主体部分 -->
+<div class="container">
+    <ul class="app clearfix" id="appListUl">
+        <li id="planAppLogo" ng-show="{{app.plan_b.show}}">
+            <a href="/html/application/plan/listPlan.html">
+                <span class="img">
+                        <span class="to-do-tip" ng-show="{{app.plan_b.tip}}"></span>
+                </span>
+                <span class="word">采购计划</span>
+            </a>
+        </li>
+        <li id="enquiryAppLogo" ng-show="{{app.enquiry_b.show}}">
+            <a href="/html/application/enquiry/list/listEnquiry.html">
+                <span class="img img2">
+                        <span class="to-do-tip" ng-show="{{app.enquiry_b.tip}}"></span>
+                </span>
+                <span class="word">询比价采购</span>
+            </a>
+        </li>
+        <li id="orderAppLogo" ng-show="{{app.order_b.show}}">
+            <a href="/html/application/order/list/listOrder.html">
+                <span class="img img9">
+                        <span class="to-do-tip" ng-show="{{app.order_b.tip}}"></span>
+                </span>
+                <span class="word">订单管理</span>
+            </a>
+        </li>
+        <li id="catalogAppLogo" ng-show="{{app.catalogo_b.show}}">
+            <a href="/html/application/catalog/edit/editCatalog.html">
+                <span class="img img3"></span>
+                <span class="word">采购品目录</span>
+            </a>
+        </li>
+        <li id="supplierAppLogo" ng-show="{{app.supplier_b.show}}">
+            <a href="/html/application/supplier/supplierList.html">
+                <span class="img img4"></span>
+                <span class="word">供应商管理</span>
+            </a>
+        </li>
+        <li id="departmentAppLogo" ng-show="{{app.department_b.show}}">
+            <a href="/html/application/department/userInfo/userInfo.html">
+                <span class="img img5"></span>
+                <span class="word">组织管理</span>
+            </a>
+        </li>
+        <li id="reportAppLogo" ng-show="{{app.report_b.show}}">
+            <a href="/html/application/report/report.html">
+                <span class="img img6"></span>
+                <span class="word">报表统计</span>
+            </a>
+        </li>
+        <li id="bidAppLogo" ng-show="{{app.bid_b.show}}">
+            <a href="/html/application/bid/list/listBid.html">
+                <span class="img img7"></span>
+                <span class="word">招标项目</span>
+            </a>
+        </li>
+        <li id="approvalLogo" ng-show="{{app.approval_b.show}}">
+            <a href="/html/application/bpm/list/list.html">
+                <span class="img img8"></span>
+                <span class="word">审批管理</span>
+            </a>
+        </li>
+        <li id="bigbuyerEntrance" ng-show="{{app.bigbuyerUrl}}">
+            <a href="{{bigbuyerUrl}}" target="_blank">
+                <span class="img bigbuyerEntrance"></span>
+                <span class="word">大买家</span>
+            </a>
+        </li>
+    </ul>
+</div>

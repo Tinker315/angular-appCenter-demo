@@ -1,0 +1,33 @@
+{
+    "plan_b" : { 
+        "show" : true,
+        "tip" : true
+    },
+    "enquiry_b" : { 
+        "show" : true,
+        "tip" : true
+    },
+    "order_b" : { 
+        "show" : true,
+        "tip" : true
+    },
+    "catalogo_b" : { 
+        "show" : true
+    },
+    "supplier_b" : { 
+        "show" : true
+    },
+    "approval_b" : { 
+        "show" : true
+    },
+    "department_b" : { 
+        "show" : true
+    },
+    "report_b" : { 
+        "show" : true
+    },
+    "bid_b" : { 
+        "show" : true
+    },
+    "bigbuyerUrl": true
+}

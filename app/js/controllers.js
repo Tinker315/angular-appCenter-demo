@@ -2,20 +2,15 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', []);
+var appcenterApp = angular.module('appcenterApp', ['angular-loading-bar', 'ngAnimate']);
 
-phonecatControllers.controller('PhoneListCtrl', ['$scope', '$http',
-  function($scope, $http) {
-    $http.get('phones/phones.json').success(function(data) {
-      $scope.phones = data;
+appcenterApp.controller('AppcenterCtrl', ['$scope', '$http', function($scope, $http) {
+    $http.get('json/queryApplicationStatus.json').success(function(data) {
+        $scope.app = data;
     });
 
-    $scope.orderProp = 'age';
-  }]);
-
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', '$http',
-  function($scope, $routeParams, $http) {
-    $http.get('phones/' + $routeParams.phoneId + '.json').success(function(data) {
-      $scope.phone = data;
-    });
-  }]);
+    $scope.headerTemplateUrl = 'module/header.html';
+    $scope.appcenterTemplateUrl = 'module/app-center.html';
+    $scope.footerTemplateUrl = 'module/footer.html';
+    $scope.orderProp = 'index';
+}]);

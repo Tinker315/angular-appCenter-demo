@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body ng-controller="testCtrl">
+    <button ng-click="tt()">点击按键</button>
+    <script src="bower_components/angular/angular.js"></script>
+    <link rel='stylesheet' href='bower_components/angular-loading-bar/build/loading-bar.min.css' type='text/css' media='all' />
+    <script type='text/javascript' src='bower_components/angular-loading-bar/build/loading-bar.min.js'></script>
+    <script>
+        angular.module('myApp', ['chieffancypants.loadingBar'])
+ 
+            .controller('testCtrl', function($scope, $http){
+                var config = {
+                    url: 'json/queryApplicationStatus.json',
+                    method: 'get'
+                };
+                $http(config).success(function(data){
+                    alert(data);
+                })
+ 
+                $scope.tt = function(){
+                    $http(config).success(function(data){
+                    alert(data);
+                })
+                }
+            })
+    </script>
+</body>
+</html>
